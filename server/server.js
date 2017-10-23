@@ -44,11 +44,6 @@ io.on('connection', (socket) => {
 
 
 
-
-
-
-
-
 	//When server disconnects or when client closes the window
 	socket.on('disconnect', () => {
 	console.log('New user was disconnected');	

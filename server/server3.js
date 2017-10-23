@@ -1,3 +1,5 @@
+//Sending data to the user when they enter the chatroom
+
 const path = require ("path");
 //Getting from server.js to public folder
 const publicPath = path.join(__dirname, '../public');

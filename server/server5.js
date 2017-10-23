@@ -25,15 +25,18 @@ io.on('connection', (socket) => {
 	console.log('New user connected');
 
 	//passing data from server to the client
+	//displays in web console
 	socket.emit('newMessage', generateMessage('Admin', 'Welcome to the chat app'));
 
 	//passing data from server to the client
+	//displays in web console
 	socket.emit('newMessage', generateMessage('Admin','New user joined'));
 
 	//Displays in console when user joins
+	//Displays in chatroom
 	socket.broadcast.emit('newMessage', {
 		from: 'Admin',
-		text: 'New user joined',
+		text: 'New user joined hhaahh',
 		createdAt: new Date().getTime()
 	});
 
@@ -44,6 +47,7 @@ io.on('connection', (socket) => {
 
 		//io.emit sends data to everyone who is on the website
 		//Type into console: socket.emit('createMessage', { from:'stebs', text:'hey'});
+		//generateMessage is from utils/message.js
 		io.emit('newMessage', generateMessage(message.from, message.text));
 
 		//***Acknoledgements*** see index.js
@@ -56,6 +60,7 @@ io.on('connection', (socket) => {
 	});
 
 });
+
 
 
 //Runs on PORT localhost:7000

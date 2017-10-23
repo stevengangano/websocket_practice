@@ -1,3 +1,5 @@
+//Sending data from the user to the server
+
 const path = require ("path");
 //Getting from server.js to public folder
 const publicPath = path.join(__dirname, '../public');
